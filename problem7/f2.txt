@@ -1,0 +1,1 @@
+Contents of f1.txt that will be copied in f2.txt
