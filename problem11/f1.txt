@@ -1,0 +1,2 @@
+Content of Original File 
+Content written from Duplicate file 

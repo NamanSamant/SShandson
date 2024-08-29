@@ -1,0 +1,2 @@
+Content in the Original File (dup2) 
+Content from Duplicate file  (dup2) 
