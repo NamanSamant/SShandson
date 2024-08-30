@@ -3,7 +3,7 @@
 Name : 15.c
 Author : Naman Samant
 Description : Write a program to display the environmental variable of the user (use environ).
-Date: 29th Aug, 2024.
+Date: 30th Aug, 2024.
 ============================================================================
 */
 
