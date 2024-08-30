@@ -1,0 +1,2 @@
+Hello from the parent process.
+Hi this is the child process.
