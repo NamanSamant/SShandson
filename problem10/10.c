@@ -2,8 +2,7 @@
 ============================================================================
 Name : 10.c
 Author : Naman Samant
-Description : Write a program to open a file with read write mode, write 10 bytes, move the file pointer by 10
-bytes (use lseek) and write again 10 bytes.
+Description : Write a program to open a file with read write mode, write 10 bytes, move the file pointer by 10 bytes (use lseek) and write again 10 bytes.
 a. check the return value of lseek
 b. open the file with od and check the empty spaces in between the data
 Date: 29th Aug, 2024.
@@ -21,21 +20,22 @@ int main() {
 		close(fD);
 		return 0;
 	}
-	const char *text = "yowhatsup";
+	const char *text = "yo what up";
 	ssize_t byteW = write(fD, text, strlen(text));
 	if(byteW < 0) {
 		printf("Error writing to file f1.txt\n");
 		close(fD);
 		return 0;
 	}
-	off_t offset = lseek(fD, strlen(text), SEEK_CUR);
+	off_t offset = lseek(fD, 10, SEEK_CUR);
 	if(offset == (off_t) -1) {
 		printf("Error when moving pointer in the file\n");
 		close(fD);
 		return 0;
 	}
-	text = "allgood";
-	byteW = write(fD, text, strlen(text));
+	printf("moved to:- %ld\n", offset);
+	text = "all good!!";
+	byteW = write(fD, text, 10);
 	if(byteW < 0) {
 		printf("There's an error while writing in file after seeking\n");
 		close(fD);
